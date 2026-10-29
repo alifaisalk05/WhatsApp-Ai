@@ -373,6 +373,6 @@ Issues and pull requests are welcome. The project is intentionally a **single fi
 
 ## License
 
-[MIT](LICENSE) © YOUR NAME
+[MIT](LICENSE) © Ali Faisal Khan
 
 > WA Agent is an independent project and is not affiliated with, endorsed by, or connected to WhatsApp or Meta.
