@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: wa-agent
+    runtime: node
+    plan: starter            # persistent disks need a paid plan
+    buildCommand: npm install
+    startCommand: node wa-agent.mjs
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: HOST
+        value: 0.0.0.0
+      - key: WA_DATA
+        value: /data
+      - key: ADMIN_PASSWORD
+        generateValue: true  # random; read it in the Render dashboard > Environment
+    disk:
+      name: wa-data
+      mountPath: /data       # WhatsApp session, config and chat state live here
+      sizeGB: 1
